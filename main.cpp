@@ -26,11 +26,12 @@ int main()
 void start()
 {
 	d=1;
+	times=6;
 	srand((unsigned)time(NULL));
 	cout<<"Choose difficulty:"<<endl;
-	cout<<"  ESAY(1~20) input'1'"<<endl;
-	cout<<"MIDDLE(1~40) input'2'"<<endl;
-	cout<<"  HARD(1~60) input'3'"<<endl;
+	cout<<"ESAY    (1~20) input'1'"<<endl;
+	cout<<"MIDDLE  (1~40) input'2'"<<endl;
+	cout<<"HARD    (1~60) input'3'"<<endl;
 	cout<<"input other key to exit the game!"<<endl;
 	cin>>d;
 	switch (d)
@@ -59,18 +60,18 @@ void timescounter()
 		{
 			if(temp==randnum)
 			{
-				cout<<"You Win!"<<endl;
+				cout<<"You Win!"<<endl<<endl;
 				start();
 			}
 			else if(temp>randnum)
 			{
-				cout<<"Your number is to big!"<<endl;
+				cout<<endl<<"Your number is to big!"<<endl;
 				--times;
 				timescounter();
 			}
 			else
 			{
-				cout<<"Your number is to small!"<<endl;
+				cout<<endl<<"Your number is to small!"<<endl;
 				--times;
 				timescounter();
 			}
