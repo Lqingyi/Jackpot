@@ -1,2 +1,2 @@
 # Jackpot
-ft
+Game Jackpot
