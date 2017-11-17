@@ -40,10 +40,10 @@ void start()
 	case '3':randnum=random(60);break;
 	default:exit(0);
 	}
-	timescount();
+	timescounter();
 }
 
-void timescount()
+void timescounter()
 {
 	if(times<=0)
 	{
@@ -62,17 +62,24 @@ void timescount()
 				cout<<"You Win!"<<endl;
 				start();
 			}
+			else if(temp>randnum)
+			{
+				cout<<"Your number is to big!"<<endl;
+				--times;
+				timescounter();
+			}
 			else
 			{
+				cout<<"Your number is to small!"<<endl;
 				--times;
-				timescount();
+				timescounter();
 			}
 		}
 		else
 		{
-			cout<<"You number is out of range!"<<endl
+			cout<<"You number is out of range!"<<endl;
 			cout<<"Please try a new number."<<endl;
-			timescount();
+			timescounter();
 		}
 	}	
 }
