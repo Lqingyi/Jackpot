@@ -18,7 +18,7 @@ int main()
 {
 	cout<<"Jackpot is a game."<<endl;
 	cout<<"You should try to guess a nubmer,and you have only six chances!"<<endl;
-	cout<<"Have fun."<<endl;
+	cout<<"Have fun."<<endl<<endl;
 	start();
 	return 0;
 }
@@ -32,7 +32,7 @@ void start()
 	cout<<"ESAY    (1~20) input'1'"<<endl;
 	cout<<"MIDDLE  (1~40) input'2'"<<endl;
 	cout<<"HARD    (1~60) input'3'"<<endl;
-	cout<<"input other key to exit the game!"<<endl;
+	cout<<"input other key to exit the game!"<<endl<<endl;
 	cin>>d;
 	switch (d)
 	{
@@ -56,7 +56,8 @@ void timescounter()
 		cout<<times<<"times left!"<<endl;
 		cout<<"Your number:"<<endl;
 		cin>>temp;
-		if(temp>=1&&temp<=((int)d*20))
+		int n=(d-48)*20;
+		if(temp>=1&&temp<=n)
 		{
 			if(temp==randnum)
 			{
@@ -78,9 +79,10 @@ void timescounter()
 		}
 		else
 		{
-			cout<<"You number is out of range!"<<endl;
+			cout<<endl<<"You number is out of range!"<<endl;
 			cout<<"Please try a new number."<<endl;
 			timescounter();
 		}
 	}	
 }
+
